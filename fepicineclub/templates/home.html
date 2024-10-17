@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FEPI Cine Club</title>
-    <link rel="stylesheet" href="{% static 'fepicineclub\css\home.css' %}">
-    <link rel="icon" href="{% static 'fepicineclub\img\favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static '\css\home.css' %}">
+    <link rel="icon" href="{% static '\img\fepilogo\favicon.ico' %}" type="image/x-icon">
 </head>
+
 <body>
     <section class="showcase">
         <header>
             <h2 class="logo">FEPI Cine Club</h2>
-            <div class="menu-icon" onclick="toggleMenu()">
-                &#9776; <!-- Ícone de "hambúrguer" -->
+            <div class="toggle">
+                <a href="{% url 'home' %}">Inicio</a>
+                <a href="{% url 'filmes' %}">Filmes</a>
+                <a href="{% url 'forum' %}">Forum</a>
+                <a href="{% url 'contato' %}">Contato</a>
             </div>
-            <nav class="toggle">
-                <a href="index.html">Inicio</a>
-                <a href="">Membros</a>
-                <a href="">Livros</a>
-                <a href="">Contato</a>
-            </nav>
         </header>
-    
-        <img src="{% static 'static\fepicineclub\img\logofepi.png' %}" alt="">
-    
+        <!-- <div class="overlay"></div> -->
+        <img src="{% static '/img/fepilogo/logo2.png' %}" alt="">
         <div class="text">
-            <h1>Bem-vindo ao FEPI Cine Clube, seu portal cinematográfico!</h1>
+            <h1>Bem-vindo ao portal cinematografico, somos o FEPI Cine Club</h1>
             <p>Descubra os filmes mais populares e mergulhe em um mundo de histórias fascinantes. Junte-se a nós e
                 compartilhe sua paixão pelo cinema!</p>
         </div>
     </section>
 </body>
+
 </html>
