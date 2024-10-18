@@ -2,17 +2,29 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
+filmes = {
+    1: {
+        'titulo': 'Anjos da Noite',
+        'sinopse': 'Selene é uma vampira',
+        'elenco': 'Kate Beckinsale, Michael Sheen, Bill Nighy',
+        'poster': '/static/cineclub/img/filme1.png',
+    },
+        2: {
+        'titulo': 'Deadpool & Wolverine',
+        'sinopse': 'Deadpool e wolverine',
+        'elenco': 'Kate Beckinsale, Michael Sheen, Bill Nighy',
+        'poster': '/static/cineclub/img/filme1.png',
+    },
+        3: {
+        'titulo': 'Anjos da Noite',
+        'sinopse': 'Selene é uma vampira',
+        'elenco': 'Kate Beckinsale, Michael Sheen, Bill Nighy',
+        'poster': '/static/cineclub/img/filme1.png',
+    },
+}
+
 def home(request):
     return render(request, "home.html") #pagina home do projeto
 
-def root_view(request):
-    return render(request, "home.html") #pagina inicial do runserver
-
-def filmes(request):
-    return render(request, "catalogo.html") #Pagina sobre a desenvolvedora
-
-def forum(request):
-    return render(request, "tropas.html") #Pagina sobre as tropas
-
-def contato(request):
-    return render(request, "contato.html")
+def movie_detail(request):
+    return render(request, 'movie_detail.html')
